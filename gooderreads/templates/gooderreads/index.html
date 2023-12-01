@@ -1,0 +1,9 @@
+{% if latest_book_list %}
+    <ul>
+    {% for book in latest_book_list %}
+        <li><a href="{% url 'gooderreads:detail' book.id %}">{{ book.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No books have been saved.</p>
+{% endif %}

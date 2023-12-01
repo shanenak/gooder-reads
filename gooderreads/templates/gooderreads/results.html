@@ -1,0 +1,9 @@
+<h1>{{ book.title }}</h1>
+<ul>
+    {% for save in saved.all %}
+    <li>{{ save.book.title
+        }}</li>
+        {% endfor %}
+</ul>
+
+<a href="{% url 'gooderreads:detail' book.id %}">Back to details</a>
