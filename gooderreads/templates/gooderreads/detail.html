@@ -1,5 +1,11 @@
 <h1>{{ book.title }}</h1>
 <h3>{{ book.author }}</h3>
-<form action="{% url 'gooderreads:vote' book.id %}" method="post">
+<form action="{% url 'gooderreads:save' book.id %}" method="post">
+    <label>Notes
+        <input type="text" name="notes">
+    </label>
+    <label>Shelf
+        <input type="text" name="shelf">
+    </label>
     <input type="submit" value="Save">
 </form>
